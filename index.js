@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 const main = async () => {
-    const expression = "^https://discord\\.com/api/.*";
+    const expression = "^https://((?:canary\\.|ptb\\.)?discord\\.com)/api/.*";
     const regex = new RegExp(expression);
 
     rl.question('Enter the Discord webhook URL: ', async (url) => {
